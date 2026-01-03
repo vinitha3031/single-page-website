@@ -22,31 +22,28 @@
       transition: all 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
+ @media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
 
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-        width: 100%;
-      }
+  .navbar-container {
+    flex-direction: row; /* keep logo left, menu right */
+    justify-content: space-between; /* push logo left, links right */
+    align-items: center;
+    flex-wrap: wrap; /* wrap menu to next line if needed */
+  }
 
-      .nav-links.active {
-        display: flex;
-      }
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* menu stays on right */
+  }
 
-      .nav-links li a {
-        font-size: 16px;
-      }
-
-      .navbar-container {
-        position: relative;
-      }
-    }
+  .nav-links li a {
+    font-size: 14px;
+  }
+}
 
     @media (max-width: 768px) {
   .hero-visual {
@@ -193,4 +190,5 @@
   </script>
 </body>
 </html>
+
 
