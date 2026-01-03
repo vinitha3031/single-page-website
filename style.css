@@ -62,6 +62,27 @@ h1, h2 {
   color: #6C63FF; 
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+}
+
 .hero {
   padding: 100px 0;
 }
@@ -443,5 +464,6 @@ h1, h2 {
     font-size: 15px;
   }
 }
+
 
 
