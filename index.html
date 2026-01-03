@@ -6,115 +6,181 @@
   <title>Business Website Demo</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li a {
+        font-size: 16px;
+      }
+
+      .navbar-container {
+        position: relative;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-  <div class="container navbar-container">
-    <div class="logo">DemoSite</div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why-us">Why Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">DemoSite</div>
 
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <header id="hero" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <h1>We design websites that make businesses look credible.</h1>
-      <p>Modern, responsive, and thoughtfully designed web experiences.</p>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>We design websites that make businesses look credible.</h1>
+        <p>Modern, responsive, and thoughtfully designed web experiences.</p>
 
-      <div class="hero-actions">
-        <button id="get-in-touch-btn" class="primary-btn">Get in Touch</button>
-        <span class="link-text">View Services →</span>
+        <div class="hero-actions">
+          <button id="get-in-touch-btn" class="primary-btn">Get in Touch</button>
+          <span class="link-text">View Services →</span>
+        </div>
       </div>
+      <div class="hero-visual"></div>
     </div>
-
-    <div class="hero-visual"></div>
-  </div>
-</header>
-
+  </header>
 
   <section id="about" class="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p>
-      We help businesses build a strong online presence through thoughtful web design.
-      Clean layouts, responsive interfaces, and seamless user experiences are our focus.
-    </p>
-  </div>
-</section>
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        We help businesses build a strong online presence through thoughtful web design.
+        Clean layouts, responsive interfaces, and seamless user experiences are our focus.
+      </p>
+    </div>
+  </section>
 
   <section id="services" class="services">
-  <div class="container">
-    <h2>Our Services</h2>
-
-    <div class="service-cards">
-      <div class="card">
-        <h3>Responsive Design</h3>
-        <p>Looks perfect on all devices: mobile, tablet, and desktop.</p>
-      </div>
-
-      <div class="card">
-        <h3>Clean UI</h3>
-        <p>Modern, simple, and user-friendly interfaces that impress visitors.</p>
-      </div>
-
-      <div class="card">
-        <h3>Fast Delivery</h3>
-        <p>Quick turnaround without compromising on design quality.</p>
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Responsive Design</h3>
+          <p>Looks perfect on all devices: mobile, tablet, and desktop.</p>
+        </div>
+        <div class="card">
+          <h3>Clean UI</h3>
+          <p>Modern, simple, and user-friendly interfaces that impress visitors.</p>
+        </div>
+        <div class="card">
+          <h3>Fast Delivery</h3>
+          <p>Quick turnaround without compromising on design quality.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="why-us" class="why-us">
-  <div class="container">
-    <h2>Why Choose Us</h2>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">📱</div>
-        <h3>Mobile-first Design</h3>
-        <p>We prioritize mobile experience to make your website perfect on every device.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">⚡</div>
-        <h3>Modern Layouts</h3>
-        <p>Clean, structured layouts that impress visitors and make navigation easy.</p>
-      </div>
-
-      <div class="why-card">
-        <div class="why-icon">💬</div>
-        <h3>Easy Communication</h3>
-        <p>Quick response and smooth collaboration to deliver exactly what you need.</p>
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">📱</div>
+          <h3>Mobile-first Design</h3>
+          <p>We prioritize mobile experience to make your website perfect on every device.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Modern Layouts</h3>
+          <p>Clean, structured layouts that impress visitors and make navigation easy.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3>Easy Communication</h3>
+          <p>Quick response and smooth collaboration to deliver exactly what you need.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="primary-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
- <section id="contact" class="contact">
-  <div class="container">
-    <h2>Get in Touch</h2>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Thank you! Your message has been sent.');
+        form.reset();
+      });
 
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="primary-btn">Send Message</button>
-    </form>
-  </div>
-</section>
+      const links = document.querySelectorAll('.nav-links li a');
+      links.forEach(link => {
+        link.addEventListener('click', function(e){
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('nav-links').classList.remove('active');
+        });
+      });
 
-
-  <script src="script.js"></script>
+      const contactBtn = document.getElementById('get-in-touch-btn');
+      const contactSection = document.getElementById('contact');
+      contactBtn.addEventListener('click', function(){
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      });
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      hamburger.addEventListener('click', function(){
+        navLinks.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
