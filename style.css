@@ -386,3 +386,62 @@ h1, h2 {
 .contact::before {
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    margin-top: 30px;
+    height: 200px;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .about::before,
+  .services::before,
+  .why-us::before,
+  .contact::before {
+    width: 250px;
+    height: 250px;
+    opacity: 0.3;
+  }
+}
+@media (max-width: 768px) {
+  .service-cards,
+  .why-grid {
+    gap: 16px;
+  }
+
+  .card,
+  .why-card {
+    padding: 24px;
+  }
+}
+@media (max-width: 768px) {
+  #contact-form {
+    width: 100%;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 15px;
+  }
+}
+
+
