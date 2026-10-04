@@ -1446,8 +1446,8 @@ will-change: transform;
   }
 
 .about-image-card {
-  min-height: auto;
-  height: auto;
+  min-height: 420px;
+  height: 420px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
