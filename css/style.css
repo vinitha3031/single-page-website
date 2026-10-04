@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1444,10 +1445,13 @@ will-change: transform;
     gap: 30px;
   }
 
-  .about-image-card {
-    min-height: 400px;
-    margin-right: 0;
-  }
+.about-image-card {
+  min-height: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
   .about-image-content {
     transform: none;
