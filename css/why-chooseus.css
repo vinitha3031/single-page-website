@@ -1,0 +1,296 @@
+/* WHY CHOOSE US*/
+
+.why-us {
+    position: relative;
+    padding: 120px 0;
+}
+
+.why-heading {
+    max-width: 720px;
+    margin-bottom: 65px;
+}
+
+.why-heading .section-label {
+    margin-bottom: 18px;
+}
+
+.why-heading h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.why-heading h2 span {
+    display: block;
+    background: linear-gradient(90deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Feature layout */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.why-card {
+    position: relative;
+    min-height: 390px;
+    padding: 35px;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.09);
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+.why-card:last-child {
+    border-right: none;
+}
+
+/* Large background number */
+
+.why-number {
+    position: absolute;
+    top: -28px;
+    right: 18px;
+    color: rgba(255, 255, 255, 0.025);
+    font-family: 'Poppins', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.4s ease;
+}
+
+.why-card:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.why-card:hover .why-number {
+    color: rgba(167, 139, 250, 0.06);
+}
+
+/* Icon */
+
+.why-icon {
+    position: relative;
+    z-index: 1;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(167, 139, 250, 0.22);
+    border-radius: 16px;
+    background: rgba(139, 92, 246, 0.09);
+    color: #a99cff;
+    font-size: 21px;
+}
+
+.why-card:nth-child(2) .why-icon {
+    border-color: rgba(125, 211, 252, 0.22);
+    background: rgba(59, 130, 246, 0.09);
+    color: #7dd3fc;
+}
+
+.why-card:nth-child(3) .why-icon {
+    border-color: rgba(244, 114, 182, 0.22);
+    background: rgba(236, 72, 153, 0.09);
+    color: #f472b6;
+}
+
+/* Content */
+
+.why-content {
+    position: relative;
+    z-index: 1;
+}
+
+.why-content h3 {
+    margin-bottom: 14px;
+    color: #f4f5f8;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.why-content p {
+    max-width: 290px;
+    color: #858da2;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Bottom accent */
+
+.why-card::after {
+    content: "";
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+            #8b5cf6,
+            transparent);
+    opacity: 0;
+    transform: scaleX(0.4);
+    transform-origin: left;
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.why-card:nth-child(2)::after {
+    background: linear-gradient(90deg,
+            #38bdf8,
+            transparent);
+}
+
+.why-card:nth-child(3)::after {
+    background: linear-gradient(90deg,
+            #ec4899,
+            transparent);
+}
+
+.why-card:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .why-us {
+        padding: 90px 0;
+    }
+
+    .why-heading {
+        max-width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .why-heading .section-label {
+        margin-bottom: 18px;
+    }
+
+    .why-heading h2 {
+        font-size: clamp(34px, 8vw, 46px);
+        line-height: 1.08;
+        letter-spacing: -1.2px;
+    }
+
+    /* Feature cards */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        border-bottom: none;
+    }
+
+    .why-card {
+        min-height: 300px;
+        padding: 28px 24px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .why-card:last-child {
+        border-bottom: none;
+    }
+
+    /* Background number */
+
+    .why-number {
+        top: -18px;
+        right: 12px;
+        font-size: 120px;
+    }
+
+    /* Icon */
+
+    .why-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 75px;
+        border-radius: 14px;
+        font-size: 19px;
+    }
+
+    /* Content */
+
+    .why-content h3 {
+        margin-bottom: 11px;
+        font-size: 20px;
+    }
+
+    .why-content p {
+        max-width: 450px;
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    /* Bottom accent */
+
+    .why-card::after {
+        left: 24px;
+        right: 24px;
+    }
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .why-us {
+        padding: 75px 0;
+    }
+
+    .why-heading {
+        margin-bottom: 38px;
+    }
+
+    .why-heading h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .why-card {
+        min-height: 275px;
+        padding: 24px 20px;
+    }
+
+    .why-number {
+        top: -14px;
+        right: 8px;
+        font-size: 100px;
+    }
+
+    .why-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 65px;
+        border-radius: 13px;
+        font-size: 17px;
+    }
+
+    .why-content h3 {
+        font-size: 18px;
+    }
+
+    .why-content p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .why-card::after {
+        left: 20px;
+        right: 20px;
+    }
+}
