@@ -1658,3 +1658,25 @@ will-change: transform;
     font-size: 30px;
   }
 }
+
+/* Section separation */
+.about {
+  background: #080b1a;
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(124, 92, 246, 0.7),
+    transparent
+  );
+}

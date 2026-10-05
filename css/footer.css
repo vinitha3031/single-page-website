@@ -230,3 +230,8 @@
         font-size: 10px;
     }
 }
+
+.footer {
+  background: #03040b;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}

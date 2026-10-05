@@ -461,3 +461,24 @@
         font-size: 16px;
     }
 }
+
+.showcase {
+  background: #080b1a;
+  position: relative;
+}
+
+.showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(124, 92, 246, 0.6),
+    transparent
+  );
+}
